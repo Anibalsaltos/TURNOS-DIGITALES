@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 	<head>
-		<meta charset="utf-8">
-		<title>Ingreso al sistema</title>
+	        <meta charset="UTF-8">
+	        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	        <link rel="stylesheet" href="css/estilo.css"/>
+	        <title>Ingreso al sistema</title>
 	</head>
 
 	<body>
- 		<form action="menu.php">
-			Usuario<br>
-			<input type="text" name="txtUsuario">
-			<br>
-			Clave<br>
-			<input type="text" name="txtClave">
-			<br><br>
-			<input type="submit" value="Ingreso al sistema">
-		</form> 		
+		<header>
+	                <img id="logo" src="img/logo.jpg" alt="CITE-MATICO"/>
+			<h1 id="titulo">CITE - MATICO</h1>
+		</header>
+
+		<section>
+			<div id="contact-form">
+ 				<form method="post" action="login.php">
+					Usuario<br>
+					<input type="text" name="txtUsuario">
+					<br>
+					Clave<br>
+					<input type="text" name="txtClave">
+				</form>
+			</div>
+  			<section class="botones">
+		                <a href="#" class="boton">Ingresar</a>
+			</section>
+
+		</section>
+
+		<footer>
+			<h1 class="foot">CITE-MATICO</h1>
+			<span class="foot">Sistema de citas para atención de padres de familia</span>
+			<h2 class="foot">EDCOM-ESPOL</h2>
+		</footer>
 	</body>
 </html>
