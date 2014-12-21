@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<link rel="stylesheet" href="css/estilo.css"/>
+	<title>Solicitud de Cita</title>
+</head>
+<body>
+	<header>
+		<img id="logo" src="img/logo.jpg" alt="CITE-MATICO"/>
+		<h1 id="titulo">CITE - MATICO</h1>
+		<nav id="navegacion">
+			<ul>
+				<li id="le" ><a id="activo" href="index.html">INICIO</a></li>
+				<li id="le"><a  href="citas.html">CITAS</a></li>
+				<li id="le"><a  href="encuestas.html">ENCUESTAS</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section>
+		<div id="cite">
+			<h1>CITE-MATICO</h1>
+			<h2>Cite-matico es un sistema que te permitira realizar las siguientes actividades.</h2>
+			<ol id="datos">
+				<li>Solicitar una cita con el profesor que desee ser atendido/a</li>
+				<li>Observar las citaciones realizadas y futuras con su respectivas observaciones y recomendaciones.</li>
+				<li>Realizar encuestas para ayudar a mejorar la atencion de los maestros.</li>
+			</ol>
+		</div>
+	</section>
+
+	<section>
+	<div id="contact-form"> 
+	   <form method="post" action="emailForm.php">  
+	      <label for="name">Seleccione el docente: <span class="required">*</span></label>
+	      <select name="docente" id="subject">
+	      	<option value="Kevin">Kevin Santacruz</option>
+	      	<option value="Joel">Joel Collahuazo</option>
+	      	<option value="Carlos">Carlos Perez</option>
+	      	<option value="Cristian">Cristian Brunis</option>
+	      	<option value="Anibal">Anibal Saltos</option>
+	      </select>
+	         
+	      <label for="name">Nombres: <span class="required">*</span></label>  
+	      <input type="text" id="nombre" name="nombre" value="" required="required" />  
+
+		<label for="name">Apellidos: <span class="required">*</span></label>  
+	      <input type="text" id="apellido" name="apellido" value="" required="required" />  
+
+	      <label for="name">Cursos: <span class="required">*</span></label>  
+	      <input type="text" id="curso" name="curso" value="" required="required" />  
+
+	         
+	       <label for="name">Asignaturas: <span class="required">*</span></label>  
+	      <input type="text" id="asignatura" name="asignatura" value="" required="required" /> 
+
+	      <label for="name">Celular: <span class="required">*</span></label>  
+	      <input type="text" id="celular" name="celular" value="" required="required" />   
+	         
+   		</form>  
+	</div>
+	<section class="botones">
+		<a href="#" class="boton">Solicitar Cita</a>
+		<a href="#" class="boton">Actualizar Datos</a>
+	</section>
+	</section>
+	<footer>
+		<h1 class="foot">CITE-MATICO</h1>
+		<span class="foot">Sistemas de citacion para atencion de padres de familia</span>
+		<h2 class="foot">EDCOM-ESPOL</h2>
+	</footer>
+</body>
+</html>
