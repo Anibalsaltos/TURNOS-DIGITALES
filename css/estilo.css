@@ -10,7 +10,8 @@ body {
    width: 465px;  
    padding: 20px;  
    margin: 50px auto;  
-   border-radius: 15px;    
+   border-radius: 15px;
+   font-weight: bold; 
    -moz-border-radius: 15px;  
    -webkit-border-radius: 15px;  
 }
@@ -35,45 +36,10 @@ body {
    border-radius: 5px;
    margin-bottom: 25px;  
    padding: 5px;  
-}  
- 
-#contact-form input:focus,  
-#contact-form select:focus,  
-#contact-form textarea:focus {  
-   background-color: #00E5AA;
-}  
- 
-#contact-form textarea {  
-   height: 150px;  
-}  
- 
-#contact-form #submit {  
-   width: 450px;  
-   color: #BFD7C1;  
-   border: none;  
-   background-color: #6EA070;
-}  
- 
-#contact-form #submit:hover {  
-   background-color: #BFD7C1;  
-   color: #6EA070;
 }
- 
-input:required, textarea:required {  
-   box-shadow: none;
-   -moz-box-shadow: none;  
-   -webkit-box-shadow: none;  
-   -o-box-shadow: none;  
-}
- 
 #contact-form .required {  
    font-weight:bold;  
-   color: #E5E6E7;      
-}
- 
-#failure, #success {
-   color: #6EA070;
-   display:none;  
+   color: red;      
 }
 #cite{
    background-color: #D6EF22;
@@ -90,8 +56,9 @@ header{
    width: 70%;
    padding-bottom: 0;
 }
-li{
-
+#tip{
+   margin-top: 0em;
+   color: black;
 }
 #le{
    list-style: none;
@@ -126,7 +93,7 @@ a{
    text-align:left;
 }
 footer{
-   margin:0 auto;
+   margin:1em auto;
    width: 70%;
    text-align: center;
    background-color: #00CA97;
@@ -162,5 +129,9 @@ text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
    margin:0 auto;
    width: 40%;
    padding-bottom: 1em;
+   text-align: center;
    margin-top: -1em;
+}
+.login{
+   box-shadow: 2px 2px #333;
 }

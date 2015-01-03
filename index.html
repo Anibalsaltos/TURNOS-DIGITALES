@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<link rel="stylesheet" href="css/estilo.css"/>
-	<title>Inicio</title>
+	<title>Cite-Matico Inicio</title>
 </head>
 <body>
 	<header>
@@ -18,7 +18,6 @@
 			</ul>
 		</nav>
 	</header>
-
 	<section>
 		<div id="cite">
 			<h1>CITE-MATICO</h1>
@@ -32,30 +31,31 @@
 	</section>
 	<section>
 	<div id="contact-form"> 
-	   <form method="post" action="emailForm.php">  	         
-	      <label for="name">Nombres: <span class="required">*</span></label>  
-	      <input type="text" id="nombre" name="nombre" value="" required="required" />  
+	   <form method="get" action="emailForm.php">  	         
+	      <label for="nombre">Nombres: <span class="required">*</span></label>  
+	      <input type="text" disabled="disabled" id="nombre" name="nombre" required="required" value="Kevin Rafael"/>  
 
-		<label for="name">Apellidos: <span class="required">*</span></label>  
-	      <input type="text" id="apellido" name="apellido" value="" required="required" />  
+		<label for="apellido">Apellidos: <span class="required">*</span></label>  
+	      <input type="text" disabled="disabled" id="apellido" name="apellido" required="required" value="Santacruz Burgos"/>  
 
-	      <label for="name">Dirección: <span class="required">*</span></label>  
-	      <input type="text" id="direccion" name="direccion" value="" required="required" />  
+	      <label for="direccion">Dirección: <span class="required">*</span></label>  
+	      <input type="text" disabled="disabled" id="direccion" name="direccion" required="required" value="Francisco Jacome Mz 294 Solar 5" />  
 
 	         
-	       <label for="name">Fecha Nacimiento: <span class="required">*</span></label>  
-	      <input type="text" id="nacimiento" name="nacimiento" value="" required="required" /> 
+	       <label for="fechaNacimiento">Fecha Nacimiento: <span class="required">*</span></label>  
+	      <input type="date" value="1994-02-18" id="nacimiento" name="nacimiento" required="required" /> 
 
-	      <label for="name">Celular: <span class="required">*</span></label>  
-	      <input type="text" id="celular" name="celular" value="" required="required" />   
+	      <label for="celular">Celular: <span class="required">*</span></label>  
+	      <input type="tel" disabled="disabled" pattern="[0-9]{10}" id="celular" name="celular" required="required" value="0981893287"/>
+	      <p id="tip"><span class="required">*</span> Datos obligatorios</p>
 	         
    		</form>  
 	</div>
 
 	
-	<section class="botones">
+	<section class="botones">	
 		<a href="solicitud.html" class="boton">Solicitar cita</a>
-		<a href="#" class="boton">Actualizar datos</a>
+		<a href="actualizar.html" class="boton">Actualizar datos</a>
 	</section>
 	</section>
 	<footer>

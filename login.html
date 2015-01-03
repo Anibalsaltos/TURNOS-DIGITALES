@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-
 	<head>
 	        <meta charset="UTF-8">
 	        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	        <link rel="stylesheet" href="css/estilo.css"/>
 	        <title>Ingreso al sistema</title>
 	</head>
-
 	<body>
 		<header>
-	                <img id="logo" src="img/logo.jpg" alt="CITE-MATICO"/>
+	        <img id="logo" src="img/logo.jpg" alt="CITE-MATICO"/>
 			<h1 id="titulo">CITE - MATICO</h1>
 		</header>
-
 		<section>
-			<div id="contact-form">
- 				<form method="post" action="login.php">
-					Usuario<br>
-					<input type="text" name="txtUsuario">
-					<br>
-					Clave<br>
-					<input type="text" name="txtClave">
+		
+	</section>
+		<section>
+			<div id="contact-form" class="login">
+ 				<form method="get" action="login.php">
+
+ 					<label for="usuario">Usuario: </label>
+					<input type="text" name="usuario">
+					<label for="name">Clave: </label>
+					<input type="password" name="clave">
+
 				</form>
 			</div>
   			<section class="botones">
-		                <a href="#" class="boton">Ingresar</a>
+		            <a href="index.html" class="boton">Ingresar</a>
 			</section>
 
 		</section>
