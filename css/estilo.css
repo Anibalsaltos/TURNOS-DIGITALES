@@ -135,3 +135,35 @@ text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 .login{
    box-shadow: 2px 2px #333;
 }
+
+/*Css para el horario*/
+#horario{
+   margin:0 auto;
+   width:70%;
+   text-align: center;
+}
+table{
+   width:100%;
+   margin-top: 2em;
+   border-spacing: 15px 5px;
+   border-collapse: separate;
+}
+tr{
+   background-color: #EEFFFF;
+   color:#0067B8;
+   font-weight: bold;
+}
+tr:first-child{
+   background-color: #E1FAF6;
+}
+td:first-child{
+   width:15%;
+   
+}
+td{
+   border-radius: 0.3em;
+   padding:0.5em;
+}
+.disponible{
+   background-color: #FFEE00;
+}
