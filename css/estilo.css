@@ -167,3 +167,59 @@ td{
 .disponible{
    background-color: #FFEE00;
 }
+#citas{
+   width:70%;
+   margin:0 auto;
+}
+#citaciones{
+   margin:0 auto;
+   width:70%;
+   text-align: left;
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+   font-size: 1.5em;
+   color:#0067B8;
+}
+.table{
+   width:100%;
+   margin-top: 0em;
+   border-spacing: 0;
+   background-color: #0067B8;
+   color:white;
+   padding-top: 1em;
+   padding-bottom: 6em;
+   border-radius: 0.6em;
+}
+.tr{
+   font-weight: normal;
+   background-color: #0067B8;
+   color:white;
+}
+.tr:first-child{
+   background-color: #0067B8;
+   color:white;
+   font-weight: bold;
+}
+
+/*Media Queries*/
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    body{
+      
+    }
+}
+
+@media only screen and (max-width: 767px) {
+   body{
+      
+   }
+    /* phones */
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    body{
+      
+    }
+}
