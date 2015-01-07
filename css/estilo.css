@@ -200,21 +200,33 @@ td{
    color:white;
    font-weight: bold;
 }
-
-.encuesta{
-    width:70%;
-   margin-top: 2em;
-   margin-left: auto;
-   margin-right: auto;
-   border-spacing: 0;
-   text-align: center; 
-   background-color: #0067B8;
-   color:white;
-   padding-top: 1em;
-   padding-bottom: 1em;
-   border-radius: 0.6em;
+.encuestas{
+   text-align: center;
+   width: 70%;
+   margin: 0 auto;
 }
-
+.encuesta{
+   background-color:#0067B8 ;
+   margin-top: 2em;
+   padding: 1em 0;
+   border-radius: 1em;
+   
+}
+.dispo{
+   font-weight: bold;
+   color: white;
+}
+.link{
+   margin: 0 1em;
+   color:#EEE;
+   padding-right: 3em;
+   border-right: 1px white solid;
+}
+time,em{
+   margin: 0 1em;
+   padding-right: 3em;
+   border-right: 1px white solid;
+}
 /*Media Queries*/
 
 @media only screen and (min-width: 768px) {
