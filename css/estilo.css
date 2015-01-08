@@ -3,6 +3,17 @@ body {
    color: #262626;
    font-family: Arial, san-serif;
 }
+
+#carousel-example-generic{
+	
+	width: 1024px;
+	margin:auto;
+	
+	}
+
+.cntr{
+	width:100%;
+}
  
 #contact-form {  
    color:#0067B8;
