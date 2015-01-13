@@ -5,6 +5,13 @@
 	        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	        <link rel="stylesheet" href="css/estilo.css"/>
 	        <title>Ingreso al sistema</title>
+
+		<script>
+			function mensaje() {
+				//document.getElementById("demo").innerHTML = "Paragraph changed.";
+				window.alert("Bienvenido al sistema...");
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -19,14 +26,14 @@
  				<form method="get" action="login.php">
 
  					<label for="usuario">Usuario: </label>
-					<input type="text" name="usuario">
+					<input type="text" name="usuario" required placeholder="Ingrese su código de usuario">
 					<label for="name">Clave: </label>
-					<input type="password" name="clave">
+					<input type="password" name="clave" required placeholder="Ingrese su contraseña"> 
 
 				</form>
 			</div>
   			<section class="botones">
-		            <a href="index.html" class="boton">Ingresar</a>
+		            <a href="index.html" class="boton" onclick="mensaje();" >Ingresar</a>
 			</section>
 
 		</section>
