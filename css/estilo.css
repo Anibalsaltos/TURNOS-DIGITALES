@@ -8,6 +8,7 @@ body {
 	
 	width: 1024px;
 	margin:auto;
+   border-radius:30px;
 	
 	}
 
@@ -17,8 +18,8 @@ body {
  
 #contact-form {  
    color:#0067B8;
-   background-color: #87C489;
-   width: 465px;  
+   background-color: #00CA97;
+   width: 908px;  
    padding: 20px;  
    margin: 50px auto;  
    border-radius: 15px;
@@ -26,6 +27,8 @@ body {
    -moz-border-radius: 15px;  
    -webkit-border-radius: 15px;  
 }
+
+
  
 #contact-form input,  
 #contact-form select,  
@@ -39,7 +42,7 @@ body {
 #contact-form input,  
 #contact-form select,  
 #contact-form textarea {  
-   width: 450px;
+   width: 800px;
    background: #fff;
    border: 0;
    -moz-border-radius: 5px;  
@@ -63,10 +66,17 @@ body {
    box-shadow: 1px 10px #BED900;
 }
 header{
+  
    margin:0 auto;
    width: 70%;
    padding-bottom: 0;
+
+   
 }
+
+     
+
+
 #tip{
    margin-top: 0em;
    color: black;
@@ -89,7 +99,7 @@ header>nav>ul>li>a{
    padding: 1em;
    border-radius: 0.3em;
    text-decoration: none;
-   font-size: 1.4em;
+   font-size: 1.6em;
    margin: 0;
 }
 #activo{
@@ -99,13 +109,14 @@ header>nav>ul>li>a{
 }
 #titulo{
    color: #FFF;
+   font-family: 'Sofadi One', cursive;
 }
 #datos{
    text-align:left;
 }
 footer{
    margin:1em auto;
-   width: 70%;
+   width: 67%;
    text-align: center;
    background-color: #00CA97;
    border-radius: 1em;
@@ -116,33 +127,44 @@ footer{
    font-size: 1em;
    color: white;
 }
-.boton{
-background-color: #FFC900;
-background-image: -webkit-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
-background-image: -moz-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
-background-image: -o-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
-background-image: linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
--ms-border-radius:8px;
--webkit-border-radius: 8px;
--moz-border-radius: 8px;
-border-radius: 8px;
--webkit-box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
--moz-box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
-box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
-color: #fff;
-display: inline-block;
-font-size: 30px;
-padding: 15px 25px;
-text-decoration: none;
-text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
-}
-.botones{
+.button1 {
+   border-top: 1px solid #ffc702;
+   background: #ffdf00;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffc702), to(#ffdf00));
+   background: -webkit-linear-gradient(top, #ffc702, #ffdf00);
+   background: -moz-linear-gradient(top, #ffc702, #ffdf00);
+   background: -ms-linear-gradient(top, #ffc702, #ffdf00);
+   background: -o-linear-gradient(top, #ffc702, #ffdf00);
+   padding: 25px 60px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 2px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 22px;
+  font-family: 'Fredoka One', cursive;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button1:hover {
+   border-top-color: #28597a;
+   background: #ffea00;
+   color: #c6a609;
+   }
+.button{
    margin:0 auto;
-   width: 40%;
+   width: 80%;
    padding-bottom: 1em;
    text-align: center;
    margin-top: -1em;
+
 }
+
+
+
 .login{
    box-shadow: 2px 2px #333;
 }
