@@ -15,6 +15,33 @@ body {
 .cntr{
 	width:100%;
 }
+.boton{
+background-color: #FFC900;
+background-image: -webkit-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
+background-image: -moz-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
+background-image: -o-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
+background-image: linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));
+-ms-border-radius:8px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
+-moz-box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
+box-shadow: 0 8px 0 #FFEE00, 0 10px 20px rgba(0, 0, 0, .4);
+color: #fff;
+display: inline-block;
+font-size: 30px;
+padding: 15px 25px;
+text-decoration: none;
+text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
+}
+.botones{
+margin:0 auto;
+width: 40%;
+padding-bottom: 1em;
+text-align: center;
+margin-top: -1em;
+}
  
 #contact-form {  
    color:#0067B8;
