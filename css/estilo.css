@@ -6,7 +6,7 @@ body {
 
 #carousel-example-generic{
 	
-	width: 1024px;
+	width: 100%;
 	margin:auto;
    border-radius:30px;
 	
@@ -35,6 +35,7 @@ padding: 15px 25px;
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 }
+
 .botones{
 margin:0 auto;
 width: 40%;
@@ -112,11 +113,19 @@ header{
    list-style: none;
    display: inline-block;
 }
-#logo,#titulo,#navegacion{
+#logo,,#navegacion{
    display: inline-block;
-   background: #00E5AA;
+   background: #08FCBD;
    font-weight: bold;
 }
+
+#titulo{
+   display: inline-block;
+   background: #DBD814;
+   font-weight: bold;
+   margin: auto;
+}
+
 #logo{
    width: 100px;
 }
