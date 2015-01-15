@@ -113,7 +113,7 @@ header{
    list-style: none;
    display: inline-block;
 }
-#logo,,#navegacion{
+#logo,#navegacion{
    display: inline-block;
    background: #08FCBD;
    font-weight: bold;
