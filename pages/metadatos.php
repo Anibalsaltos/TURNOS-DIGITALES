@@ -9,5 +9,5 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/icono.jpg" />
     <link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-	<title>Cite-Matico Inicio</title>
+	<title>Cite-Matico</title>
 </head>

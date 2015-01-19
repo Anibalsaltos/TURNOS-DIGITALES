@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-    
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-	<link rel="stylesheet" href="css/estilo.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="img/icono.jpg" />
-    <link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-	<title>Cite-Matico Inicio</title>
-</head>
+
+
+<? Php  include_once ( " pages/metadatos.php " ); ?>
+
 <body class="container">
 	<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li id="le" ><a id="activo" href="index.html">INICIO</a></li>
-                <li id="le"><a  href="pages/login.html">LOGIN</a></li>
-				<li id="le"><a  href="pages/citas.html">CITAS</a></li>
-				<li id="le"><a  href="pages/encuestas.html">ENCUESTAS</a></li>
+				<li id="le"><a id="activo" href="index.php">INICIO</a></li>
+                <li id="le"><a  href="pages/login.php">LOGIN</a></li>
+				<li id="le"><a  href="pages/citas.php">CITAS</a></li>
+				<li id="le"><a  href="pages/encuestas.php">ENCUESTAS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -107,7 +98,7 @@
 
 	
 	<section class="botones">
-		<a href="pages/solicitud.html" class="boton">Solicitar cita</a>
+		<a href="pages/solicitud.php" class="boton">Solicitar cita</a>
 		<a class="boton">Actualizar datos</a>
 	</section>
 	</section>
