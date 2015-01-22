@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	
-	<? Php  include_once ( " metadatos.php "); ?>
+	<?Php  include 'pages/metadatos.php' ; ?>
 
 	<head>
 		<script>
