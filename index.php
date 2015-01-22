@@ -2,7 +2,7 @@
 <html lang="es">
 
 
-<? Php  include_once ( " pages/metadatos.php " ); ?>
+<?Php  include 'pages/metadatos.php' ; ?>
 
 <body class="container">
 	<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
