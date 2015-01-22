@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<?Php  include 'pages/metadatos.php' ; ?>
+<?Php  include 'metadatos.php' ; ?>
 <body>
 	<header>
 		<img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
