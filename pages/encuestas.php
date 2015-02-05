@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-		<link rel="stylesheet" href="../css/bootstrap.css">
-	    <link rel="stylesheet" href="../css/estilo.css"/>
-        <link rel="shortcut icon" type="image/x-icon" href="../img/icono.jpg" />
-	    <title>Cite-Matico Horario</title>
-	</head>
+	<?Php  include 'metadatos.php' ; ?>
 <body>
 		<header>
 		<img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li id="le" ><a href="../index.html">INICIO</a></li>
-				<li id="le"><a  href="../pages/citas.html">CITAS</a></li>
-				<li id="le"><a id="activo" href="#">ENCUESTAS</a></li>
+				<li class="le" ><a href="../index.php">INICIO</a></li>
+				<li class="le"><a  href="../pages/citas.php">CITAS</a></li>
+				<li class="le"><a id="activo" href="#">ENCUESTAS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -39,10 +32,6 @@
 			<em class="dispo">DISPONIBLE</em>
 		</article>
 	
-	<footer>
-		<h1 class="foot">CITE-MATICO</h1>
-		<span class="foot">Sistema de citas para atención de padres de familia</span>
-		<h2 class="foot">EDCOM-ESPOL</h2>
-	</footer>
+	<?php include 'footer.php' ; ?>
 </body>
 </html>

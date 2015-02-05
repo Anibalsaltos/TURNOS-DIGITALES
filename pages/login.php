@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+	
+	<?Php  include 'metadatos.php' ; ?>
+
 	<head>
-	        <meta charset="UTF-8">
-	        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-            <link rel="shortcut icon" type="image/x-icon" href="../img/icono.jpg" />
-
-	        <link rel="stylesheet" href="../css/bootstrap.css">
-	        <link rel="stylesheet" href="../css/estilo.css"/>
-	        <title>Ingreso al sistema</title>
-
 		<script>
 			function mensaje() {
 				//document.getElementById("demo").innerHTML = "Paragraph changed.";
@@ -36,15 +31,11 @@
 				</form>
 			</div>
   			<section class="botones">
-		            <a href="../index.html" class="boton" onclick="mensaje();" >Ingresar</a>
+		            <a href="../index.php" class="boton" onclick="mensaje();" >Ingresar</a>
 			</section>
 
 		</section>
 
-		<footer>
-			<h1 class="foot">CITE-MATICO</h1>
-			<span class="foot">Sistema de citas para atención de padres de familia</span>
-			<h2 class="foot">EDCOM-ESPOL</h2>
-		</footer>
+		<?php include 'footer.php' ; ?>
 	</body>
 </html>
