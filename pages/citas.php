@@ -7,9 +7,9 @@
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li id="le" ><a href="../index.html">INICIO</a></li>
-				<li id="le"><a id="activo" href="citas.html">CITAS</a></li>
-				<li id="le"><a  href="../pages/encuestas.html">ENCUESTAS</a></li>
+				<li class="le" ><a href="../index.php">INICIO</a></li>
+				<li class="le"><a id="activo" href="citas.php">CITAS</a></li>
+				<li class="le"><a  href="../pages/encuestas.php">ENCUESTAS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -54,6 +54,6 @@
 		</table>
 	</section>
 
-	<?php include_once("footer.php");?>
+	<?php include 'footer.php' ; ?>
 </body>
 </html>
