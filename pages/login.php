@@ -31,11 +31,11 @@
 				</form>
 			</div>
   			<section class="botones">
-		            <a href="../index.html" class="boton" onclick="mensaje();" >Ingresar</a>
+		            <a href="../index.php" class="boton" onclick="mensaje();" >Ingresar</a>
 			</section>
 
 		</section>
 
-		<?php include_once("footer.php");?>
+		<?php include 'footer.php' ; ?>
 	</body>
 </html>
