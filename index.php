@@ -2,7 +2,8 @@
 <html lang="es">
 
 
-<?Php  include 'pages/metadatos.php' ; ?>
+<?Php  include 'pages/head.php' ; ?>
 
 <?php include 'pages/bodyindex.php' ;?>
+
 </html>
