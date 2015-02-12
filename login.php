@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-	
-	<?Php  include 'metadatos.php' ; ?>
-
 	<head>
+	    <?php include 'metadatos.php'; ?>
+	    <title>Cite-Matico Login</title>
 		<script>
 			function mensaje() {
 				//document.getElementById("demo").innerHTML = "Paragraph changed.";
@@ -13,7 +12,7 @@
 	</head>
 	<body>
 		<header>
-	        <img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
+	        <img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
 			<h1 id="titulo">CITE - MATICO</h1>
 		</header>
 		<section>
@@ -31,11 +30,10 @@
 				</form>
 			</div>
   			<section class="botones">
-		            <a href="../index.php" class="boton" onclick="mensaje();" >Ingresar</a>
+		            <a href="index.php" class="boton" onclick="mensaje();" >Ingresar</a>
 			</section>
 
 		</section>
-
-		<?php include 'footer.php' ; ?>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>

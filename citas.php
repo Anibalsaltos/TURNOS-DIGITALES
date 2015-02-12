@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-	<?Php  include 'metadatos.php' ; ?>
+	<head>
+		<?php include 'metadatos.php'; ?>
+	    <title>Cite-Matico Citas</title>
+	</head>
 <body>
-		<header>
-		<img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
+	<header>
+		<img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li class="le" ><a href="../index.php">INICIO</a></li>
+				<li class="le" ><a href="index.php">INICIO</a></li>
 				<li class="le"><a id="activo" href="citas.php">CITAS</a></li>
-				<li class="le"><a  href="../pages/encuestas.php">ENCUESTAS</a></li>
+				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -53,7 +56,6 @@
 			</tr>
 		</table>
 	</section>
-
-	<?php include 'footer.php' ; ?>
+	<?php include 'footer.php'; ?>
 </body>
 </html>

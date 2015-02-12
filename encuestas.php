@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-	<?Php  include 'metadatos.php' ; ?>
+	<head>
+		<?php include 'metadatos.php'; ?>
+	    <title>Cite-Matico Encuestas</title>
+	</head>
 <body>
-		<header>
-		<img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
+	<header>
+		<img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li class="le" ><a href="../index.php">INICIO</a></li>
-				<li class="le"><a  href="../pages/citas.php">CITAS</a></li>
+				<li class="le" ><a href="index.php">INICIO</a></li>
+				<li class="le"><a  href="citas.php">CITAS</a></li>
 				<li class="le"><a id="activo" href="#">ENCUESTAS</a></li>
 			</ul>
 		</nav>
@@ -31,7 +34,6 @@
 			<a href="#" class="link">www.encuesta.com</a>
 			<em class="dispo">DISPONIBLE</em>
 		</article>
-	
-	<?php include 'footer.php' ; ?>
+	<?php include 'footer.php'; ?>
 </body>
 </html>

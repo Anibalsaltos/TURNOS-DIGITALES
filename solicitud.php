@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<?Php  include 'metadatos.php' ; ?>
+<head>
+	<?php include 'metadatos.php'; ?>
+	<title>Solicitud de Cita</title>
+</head>
 <body>
 	<header>
-		<img id="logo" src="../img/logo.png" alt="CITE-MATICO"/>
+		<img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
 		<h1 id="titulo">CITE - MATICO</h1>
 		<nav id="navegacion">
 			<ul>
-				<li class="le" ><a id="activo" href="../index.php">INICIO</a></li>
-				<li class="le"><a  href="../pages/citas.php">CITAS</a></li>
-				<li class="le"><a  href="../pages/encuestas.php">ENCUESTAS</a></li>
+				<li class="le" ><a id="activo" href="index.php">INICIO</a></li>
+				<li class="le"><a  href="citas.php">CITAS</a></li>
+				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -58,9 +61,9 @@
    		</form>  
 	</div>
 	<section class="botones">
-		<a href="horario.html" class="boton">Ver horario</a>
+		<a href="horario.php" class="boton">Ver horario</a>
 	</section>
 	</section>
-	<?php include 'footer.php' ; ?>
+	<?php include 'footer.php'; ?>
 </body>
 </html>
