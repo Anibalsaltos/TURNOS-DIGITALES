@@ -6,7 +6,7 @@ body {
 
 #carousel-example-generic{
 	
-	width: 100%;
+	width: 1024px;
 	margin:auto;
    border-radius:30px;
 	
@@ -35,7 +35,6 @@ padding: 15px 25px;
 text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 }
-
 .botones{
 margin:0 auto;
 width: 40%;
@@ -97,35 +96,22 @@ header{
   
    margin:0 auto;
    width: 70%;
-   padding-bottom: 0;
-
-   
+   padding-bottom: 0;  
 }
-
-     
-
 
 #tip{
    margin-top: 0em;
    color: black;
 }
-#le{
+.le{
    list-style: none;
    display: inline-block;
 }
-#logo,,#navegacion{
+#logo,#titulo,#navegacion{
    display: inline-block;
-   background: #08FCBD;
+   background: #00E5AA;
    font-weight: bold;
 }
-
-#titulo{
-   display: inline-block;
-   background: #DBD814;
-   font-weight: bold;
-   margin: auto;
-}
-
 #logo{
    width: 100px;
 }
