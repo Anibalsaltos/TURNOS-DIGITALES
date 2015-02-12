@@ -1,0 +1,4 @@
+Configuración de Ubuntu virtualizado en MAC
+===========================================
+Agregar en Adaptador 2 (Adaptador sólo anfitrión) vboxnet0
+Reiniciar máquina virtual o guest (ubuntu)
