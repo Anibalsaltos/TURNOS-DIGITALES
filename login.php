@@ -11,14 +11,21 @@
 		</script>
 	</head>
 	<body>
+		<div class="container">
 		<header>
-	        <img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
-			<h1 id="titulo">CITE - MATICO</h1>
+			<div class="row">
+				<div class="col-xs-12">
+			        <img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
+					<h1 class="titulo-login">CITE - MATICO</h1>
+				</div>
+			</div>
 		</header>
 		<section>
 		
 	</section>
 		<section>
+			<div class="row">
+				<div class="col-xs-12">
 			<div id="contact-form" class="login">
  				<form method="get" action="login.php">
 
@@ -32,8 +39,10 @@
   			<section class="botones">
 		            <a href="index.php" class="boton" onclick="mensaje();" >Ingresar</a>
 			</section>
-
+			</div>
+		</div>
 		</section>
 		<?php include 'footer.php'; ?>
+	</div>
 	</body>
 </html>

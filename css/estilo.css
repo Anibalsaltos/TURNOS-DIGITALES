@@ -3,15 +3,11 @@ body {
    color: #262626;
    font-family: Arial, san-serif;
 }
-
 #carousel-example-generic{
-	
-	width: 1024px;
 	margin:auto;
    border-radius:30px;
 	
 	}
-
 .cntr{
 	width:100%;
 }
@@ -36,8 +32,8 @@ text-decoration: none;
 text-shadow: 0 -1px 1px rgba(25, 123, 29, .7);
 }
 .botones{
-margin:0 auto;
-width: 40%;
+//margin:0 auto;
+//width: 40%;
 padding-bottom: 1em;
 text-align: center;
 margin-top: -1em;
@@ -45,8 +41,7 @@ margin-top: -1em;
  
 #contact-form {  
    color:#0067B8;
-   background-color: #00CA97;
-   width: 908px;  
+   background-color: #00CA97; 
    padding: 20px;  
    margin: 50px auto;  
    border-radius: 15px;
@@ -64,12 +59,12 @@ margin-top: -1em;
    font-size: 15px;  
    margin-bottom: 2px;
    font-family: Arial, san-serif;
+   width:100%;
 }  
  
 #contact-form input,  
 #contact-form select,  
 #contact-form textarea {  
-   width: 800px;
    background: #fff;
    border: 0;
    -moz-border-radius: 5px;  
@@ -87,13 +82,12 @@ margin-top: -1em;
    color: #848903;
    border-radius: 1em;
    text-align: center;
-   margin:0 auto;
-   width: 70%;
-   padding: 0.3em 2em;
+   //margin:0 auto;
+   //width: 100%;
+   //padding: 0.3em 2em;
    box-shadow: 1px 10px #BED900;
 }
 header{
-  
    margin:0 auto;
    width: 70%;
    padding-bottom: 0;  
@@ -107,13 +101,29 @@ header{
    list-style: none;
    display: inline-block;
 }
-#logo,#titulo,#navegacion{
-   display: inline-block;
-   background: #00E5AA;
+#navegacion{
    font-weight: bold;
 }
+#navegacion :hover{
+   color:#337ab7;
+}
+.titulo{
+   display: inline-block;
+   color:#00E5AA;
+   font-weight: bolder;
+   font-size: 1.5em;
+}
+.titulo-login{
+   display: inline-block;
+   color:#FFF;
+   font-weight: bolder;
+   font-size: 1.5em;
+
+}
 #logo{
-   width: 100px;
+   display: inline-block;
+   font-weight: bold;
+   width: 10%;
 }
 header>nav>ul>li>a{
    background: #00D5BC;
@@ -125,20 +135,14 @@ header>nav>ul>li>a{
    margin: 0;
 }
 #activo{
-  color: #D9E311;
+  color: #FFF;
   background: #00E5AA;
    
-}
-#titulo{
-   color: #FFF;
-   font-family: Arial, cursive;
 }
 #datos{
    text-align:left;
 }
-footer{
-   margin:1em auto;
-   width: 67%;
+.pie{
    text-align: center;
    background-color: #00CA97;
    border-radius: 1em;
@@ -184,9 +188,6 @@ footer{
    margin-top: -1em;
 
 }
-
-
-
 .login{
    box-shadow: 2px 2px #333;
 }
@@ -197,38 +198,13 @@ footer{
    width:70%;
    text-align: center;
 }
-table{
-   width:100%;
-   margin-top: 2em;
-   border-spacing: 15px 5px;
-   border-collapse: separate;
-}
-tr{
-   background-color: #EEFFFF;
-   color:#0067B8;
-   font-weight: bold;
-}
-tr:first-child{
-   background-color: #E1FAF6;
-}
-td:first-child{
-   width:15%;
-   
-}
-td{
-   border-radius: 0.3em;
-   padding:0.5em;
-}
 .disponible{
    background-color: #FFEE00;
-}
-#citas{
-   width:70%;
-   margin:0 auto;
+   padding-left: 1em;
 }
 #citaciones{
    margin:0 auto;
-   width:70%;
+   font-weight: bolder;
    text-align: left;
    margin-top: 1em;
    margin-bottom: 0.5em;
@@ -257,50 +233,32 @@ td{
 }
 .encuestas{
    text-align: center;
-   width: 70%;
    margin: 0 auto;
+   color:white;
 }
 .encuesta{
-   background-color:#0067B8 ;
-   margin-top: 2em;
-   padding: 1em 0;
+   margin-top: 1em;
+   padding:1em;
    border-radius: 1em;
-   
+   background-color:#0067B8 ;
 }
-.dispo{
+.fecha{
+   padding-right: 1em;
+}
+.enlace{
    font-weight: bold;
    color: white;
+   padding-left: 1em;
 }
-.link{
-   margin: 0 1em;
-   color:#EEE;
-   padding-right: 3em;
-   border-right: 1px white solid;
+.enlace:hover{
+   color:#DDD;
 }
-time,em{
-   margin: 0 1em;
-   padding-right: 3em;
-   border-right: 1px white solid;
+.estado{
+   padding-left: 1em;
 }
-/*Media Queries*/
-
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
-    body{
-      
-    }
-}
-
-@media only screen and (max-width: 767px) {
-   body{
-      
-   }
-    /* phones */
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
-    body{
-      
-    }
+.contenedor{
+   max-width: 980px;
+   margin:0px auto  0px auto;
+   position: relative;
+   text-align: center;
 }

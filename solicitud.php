@@ -5,30 +5,40 @@
 	<title>Solicitud de Cita</title>
 </head>
 <body>
-	<header>
-		<img id="logo" src="img/logo.png" alt="CITE-MATICO"/>
-		<h1 id="titulo">CITE - MATICO</h1>
-		<nav id="navegacion">
-			<ul>
-				<li class="le" ><a id="activo" href="index.php">INICIO</a></li>
+	<div class="container">
+		<!--Menu de navegacion-->
+		<header>
+		<nav class="navbar navbar-default" role="navigation">
+		    <div class="container-fluid">
+			    <div class="navbar-header visble-xs hidden-md hidden-sm hidden-lg">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+			        <span class="sr-only">Navegacion</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png" alt="CITE-MATICO"/> CITE - MATICO
+			      </a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="menu">
+		      <div class="navbar-left hidden-xs visible-md visible-sm visible-lg">
+		      	<h1 class="titulo"><img id="logo" src="img/logo.png" alt="CITE-MATICO"/> CITE-MATICO</h1>
+		      </div>
+		      <nav id="navegacion">
+		      <ul class="nav navbar-nav navbar-right">
+	              <li class="le" ><a id="activo" href="index.php">INICIO</a></li>
 				<li class="le"><a  href="citas.php">CITAS</a></li>
 				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
-			</ul>
-		</nav>
+	            </ul>
+	        </nav>
+		    </div>
+	    </div>
+	</nav>
 	</header>
-
-	<section>
-		<div id="cite">
-			<h1>CITE-MATICO</h1>
-			<h2>CITE-MATICO es un sistema que te permitirá realizar las siguientes actividades.</h2>
-			<ol id="datos">
-				<li>Solicitar una cita con el profesor que desee ser atendido/a.</li>
-				<li>Observar las citaciones realizadas y futuras con su respectivas observaciones y recomendaciones.</li>
-				<li>Realizar encuestas para ayudar a mejorar la atención de los maestros.</li>
-			</ol>
-		</div>
-	</section>
-
+	<!--Info adicional-->
+	<?php include 'info.php' ?>
+	<!--Solicitud Cita-->
 	<section>
 	<div id="contact-form"> 
 	   <form method="post" action="emailForm.php">  
@@ -65,5 +75,6 @@
 	</section>
 	</section>
 	<?php include 'footer.php'; ?>
+</div>
 </body>
 </html>
