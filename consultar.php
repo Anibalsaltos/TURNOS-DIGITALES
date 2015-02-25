@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<?php include 'metadatos.php' ?>
 		<title>Cite Matico - Consultar Datos</title>
 	</head>
 	<body>
@@ -14,6 +13,36 @@
 		</header>
 		
 		<section class="datos">
+
+			<div>
+				<h1>Docente</h1>
+				<div><a href="docente/formularioDocente.php" class="nuevo">Crear Docente</a></div>
+				<div class="salon">
+					<h2>ID</h2>
+					<h2>Nombre</h2>
+					<h2>Estado</h2>
+					<h2>Opciones</h2>
+				</div>
+				<?php 
+					include_once("docente/docenteCollector.php");
+					$DocenteCollectorObj = new DocenteCollector();
+				?>
+				<?php
+				foreach ($DocenteCollectorObj->readdocentes() as $c){
+					echo "<div class='datos-salon'>";
+					echo "<div>".$c->getIdDocente() ."</div>";
+					echo "<div>".$c->getNombre() ."</div>";
+					echo "<div>".$c->getEstado() ."</div>";
+					echo "<div><a href='docente/formularioDocenteEditar.php?id=".$c->getIdDocente()."'>Editar</a></div>";
+					echo "<div><a href='docente/eliminarDocente.php?id=".$c->getIdDocente()."'>Eliminar</a></div>";
+					echo "</div>";
+				}
+				 ?>
+					
+					
+			</div>
+
+
 			<div>
 				<h1>Institucion</h1>
 				<div><a href="#" class="nuevo">Nuevo</a></div>
@@ -129,5 +158,5 @@
 				</div>
 			</div>
 		</section>
-	</body>
+	</body>	
 </html>
