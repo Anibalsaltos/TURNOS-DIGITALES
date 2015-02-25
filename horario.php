@@ -31,6 +31,7 @@
 	            <li class="le" ><a id="activo" href="index.php">INICIO</a></li>
 				<li class="le"><a  href="citas.php">CITAS</a></li>
 				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
+				<li class="cs"><a href="login.php">Cerrar Sesión</a></li>
 	            </ul>
 	        </nav>
 		    </div>
