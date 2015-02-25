@@ -2,6 +2,8 @@ body {
    background: #00E5AA; /* light green */
    color: #262626;
    font-family: Arial, san-serif;
+   margin: 0;
+   padding: 0;
 }
 #carousel-example-generic{
 	margin:auto;
@@ -106,6 +108,9 @@ header{
 }
 #navegacion :hover{
    color:#337ab7;
+}
+.navegacion{
+   width: 80%;
 }
 .titulo{
    display: inline-block;
@@ -261,4 +266,115 @@ header>nav>ul>li>a{
    margin:0px auto  0px auto;
    position: relative;
    text-align: center;
+}
+/*EstilosDatos*/
+.datos{
+   margin: 0;
+   padding: 0;
+   width: 100% ;
+   background-color: #2aa;
+   padding-bottom: 3em;
+
+}
+.datos div h1{
+   text-align:center;
+   font-size: 1.5em;
+   font-weight: bold;
+}
+.datos div {
+   width: 100%;
+   text-align: center;
+}
+.datos div .institucion h2{
+   font-size: 1.2em;
+   background-color: #CCC;
+   width: 23%;
+   font-weight: bold;
+   display: inline-block;
+}
+.datos-institucion{
+   text-align: center;
+}
+.datos-institucion div{
+    font-size: 1.2em;
+   background-color: #CCC;
+   width: 23%;
+   display: inline-block;
+}
+.datos-institucion div:nth-child(n+4){
+  width: 11.5%;
+}
+
+
+.datos div .salon h2{
+   font-size: 1.2em;
+   background-color: #CCC;
+   width: 23%;
+   display: inline-block;
+   font-weight: bold;
+}
+.datos-salon{
+   text-align: center;
+}
+.datos-salon div{
+    font-size: 1.2em;
+   background-color: #CCC;
+   width: 23%;
+   display: inline-block;
+}
+.datos-salon div:nth-child(n+4){
+  width: 11.5%;
+}
+
+
+.datos div .representante h2{
+   font-size: 1.2em;
+   background-color: #CCC;
+   width: 12%;
+   display: inline-block;
+   font-weight: bold;
+}
+.datos div .representante h2:nth-child(1){
+   width: 2%;
+}
+.datos div .representante h2:nth-child(8){
+   width: 5%;
+}
+.datos-representante{
+   text-align: center;
+}
+.datos-representante div{
+   font-size: 1.2em;
+   background-color: #CCC;
+   display: inline-block;
+   width: 12%;
+}
+.datos-representante div:nth-child(1)
+{
+   width: 2%;
+}
+.datos-representante div:nth-child(8){
+   width: 5%;
+}
+.datos-representante div:nth-child(n+9){
+   width: 6%;
+}
+.nuevo{
+   padding: .2em 1em;
+   border-radius: 1em;
+   font-weight: bold;
+   font-size: 1.2em;
+   //display: inline-table;
+   box-sizing: border-box;
+   text-align: center;
+   width: 100%;
+   margin-left: 5%;
+   background-color: #CCC;
+   color: #2222CC;
+}
+.nuevo a{
+   width: 100%;
+}
+.datos div:nth-child(2){
+   text-align: left;
 }
