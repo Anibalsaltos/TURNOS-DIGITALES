@@ -1,0 +1,11 @@
+Lección:
+
+Crear página: gasolina.html
+Formulario:
+	Nombre
+	Ruc
+	Cantidad
+	
+La página gasolina.html lo recibe: 
+repositorio.php
+
