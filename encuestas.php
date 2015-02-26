@@ -32,7 +32,11 @@
 				<li class="le"><a id="activo" href="#">ENCUESTAS</a></li>
 				<li class="cs"><a href="login.php">Cerrar Sesión</a></li>
 	            </ul>
+
 	        </nav>
+	        <ul class="usuario">
+			    <li>Bienvenido, Joel</li>
+			</ul>
 		    </div>
 	    </div>
 	</nav>

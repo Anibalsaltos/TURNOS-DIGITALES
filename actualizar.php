@@ -38,6 +38,9 @@
 	              <li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
 	              <li class="cs"><a href="login.php">Cerrar Sesión</a></li>
 	            </ul>
+	            <ul class="usuario">
+			    <li>Bienvenido, Joel</li>
+			</ul>
 	        </nav>
 		    </div>
 	    </div>
