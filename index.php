@@ -33,8 +33,9 @@
 	              <li class="le"><a  href="citas.php">CITAS</a></li>
 	              <li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
 	              <li class="cs"><a href="login.php">Cerrar Sesión</a></li>
-	            </ul>
-	        </nav>
+	          </ul>
+	           
+ 	        </nav>
 		    </div>
 	    </div>
 	</nav>
@@ -49,13 +50,13 @@
 	  		</ol>
 			<div class="carousel-inner">
 			    <div class="item active">
-			    <img src="img/c1.png" alt="Eventos" class="cntr"/>
+			    <img src="img/c1.png" alt="" class="cntr"/>
 			    <div class="carousel-caption"></div>
 			    </div>
-			    <div class="item"><img src="img/c2.png" alt="Diversidad de platos" class="cntr"/>
+			    <div class="item"><img src="img/c2.png" alt="" class="cntr"/>
 			    <div class="carousel-caption"></div>
 			    </div>
-			    <div class="item"><img src="img/c3.png" alt="Eventos" class="cntr"/>
+			    <div class="item"><img src="img/c3.png" alt="" class="cntr"/>
 			   	<div class="carousel-caption"></div>
 			   	</div>
 			</div>
@@ -70,7 +71,15 @@
 	<!--Info adicional-->
 	<?php include 'info.php' ?>
 	<!--Formulario Usuario-->
-	<div id="contact-form" class="row">
+	<section class="datos-user">
+		<h2>Información General</h2>
+		<div>Nombre : Kevin Correa</div>
+		<div>Cédula : 112312312332</div>
+		<div>Dirección : Francisco Jacome</div>
+		<div>Teléfono : 666</div>
+	</section>
+
+	<!-- <div id="contact-form" class="row">
 		<div class="col-lg-12">
 		   <form method="get" action="emailForm.php">  	         
 		    <label for="nombre">Nombres: <span class="required">*</span></label>  
@@ -91,7 +100,7 @@
 		    <p id="tip"><span class="required">*</span> Datos obligatorios</p>     
 	   		</form>
 	   	</div>
-	</div>
+	</div> -->
 	<section class="botones">
 		<div class="row">
 			<div class="col-xs-6">
