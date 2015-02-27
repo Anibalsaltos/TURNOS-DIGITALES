@@ -5,8 +5,8 @@
 <body>
 <div id="main">
 <?php
-$descripcion=$_POST["descripcion"];
 $idpregunta=$_POST["idpregunta"];
+$descripcion=$_POST["descripcion"];
 $estado = $_POST["estado"];
 
 echo "Edici&oacute;n en proceso ....  </br>";

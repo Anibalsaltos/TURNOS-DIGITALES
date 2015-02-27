@@ -9,11 +9,11 @@
 $id=$_GET["id"];
 
 //incluir la libreria de DemoCollector
-include_once("DemoCollector.php");
-//creo una instancia de DemoCollector
-$DemoCollectorObj = new DemoCollector();
-//Ejecuto el metodo para eliminar el objeto Demo indicando el id
-$DemoCollectorObj->deleteDemo($id);
+include_once("PreguntaCollector.php");
+//creo una instancia de PreguntaCollector
+$PreguntaCollectorObj = new PreguntaCollector();
+//Ejecuto el metodo para eliminar el objeto Pregunta indicando el id
+$PreguntaCollectorObj->deletePregunta($id);
 
 // muestro mensaje de que se ha eliminado el objeto Demo
 echo "valor id". htmlspecialchars($id) ."  ha sido eliminado correctamente.";

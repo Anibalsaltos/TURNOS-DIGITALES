@@ -13,7 +13,7 @@ class PreguntaCollector extends Collector
   }
 
   function createPregunta($descripcion, $estado) {    
-    $insertrow = self::$db->insertRow("INSERT INTO clasedb.pregunta (idpregunta, descripcion, estado) VALUES (?, ?, ?)", array(null, "{$nombre}", $estado));
+    $insertrow = self::$db->insertRow("INSERT INTO claseDB.pregunta (idpregunta, descripcion, estado) VALUES (?, ?, ?)", array(null, "{$descripcion}", $estado));
   }  
 
   function readPreguntas() {
@@ -27,11 +27,11 @@ class PreguntaCollector extends Collector
   }
   
   function updatePregunta($id,$descripcion, $estado) {    
-    $insertrow = self::$db->updateRow("UPDATE clasedb.pregunta SET pregunta.descripcion = ?, pregunta.estado = ?  WHERE pregunta.iddemo = ? ", array( "{$descripcion}",$estado,$id));
+    $insertrow = self::$db->updateRow("UPDATE claseDB.pregunta SET pregunta.descripcion = ?, pregunta.estado = ?  WHERE pregunta.idpregunta = ? ", array( "{$descripcion}","{$estado}",$id));
   }  
 
   function deletePregunta($id) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM clasedb.pregunta WHERE idpregunta= ?", array("{$id}"));
+    $deleterow = self::$db->deleteRow("DELETE FROM claseDB.pregunta WHERE idpregunta= ?", array("{$id}"));
   }  
 
 

@@ -4,8 +4,8 @@ include_once('dataBase.php');
 // Define configuration
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
-define("DB_PASS", "root");
-define("DB_NAME", "clasedb");
+define("DB_PASS", "");
+define("DB_NAME", "claseDB");
 //NOMBRE BD : citas
 
 

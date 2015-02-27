@@ -5,7 +5,7 @@
 <body>
 <div id="main">
 <?php
-$descripcion=$_POST["descipcion"];
+$descripcion=$_POST["descripcion"];
 $estado = $_POST["estado"];
 
 //$valor="manuel";
@@ -17,7 +17,7 @@ $PreguntaCollectorObj = new PreguntaCollector();
 
 echo $estado;
 
-$PreguntaCollectorObj->createPregunta($descipcion, $estado);
+$PreguntaCollectorObj->createPregunta($descripcion, $estado);
 
 echo "valor agregado </br>";
 ?>
