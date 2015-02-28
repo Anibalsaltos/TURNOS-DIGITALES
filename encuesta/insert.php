@@ -5,14 +5,19 @@
 <body>
 <div id="main">
 <?php
-$valor=$_POST["descripcion"];
+$descripcion=$_POST["descripcion"];
+$estado = $_POST["estado"];
+
 //$valor="manuel";
-echo 'Hola ' . htmlspecialchars($valor) . '!';
+//echo 'Hola ' . htmlspecialchars($valor) . '!';
 
 include_once("EncuestaCollector.php");
 
 $EncuestaCollectorObj = new EncuestaCollector();
-$EncuestaCollectorObj->createEncuesta($valor);
+
+echo $estado;
+
+$EncuestaCollectorObj->createEncuesta($descripcion, $estado);
 
 echo "valor agregado </br>";
 ?>

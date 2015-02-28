@@ -49,6 +49,6 @@ Estado:
 
 
 <a href="index.php">Cancelar</a>
-<input type="Hecho" value="Guardar" />
+<input type="submit" value="Guardar" />
 
 </form>
