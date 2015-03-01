@@ -57,52 +57,35 @@
   </nav>
   </header>
 
-<?php
-//obtener el valor de ID que viene del metodo GET a traves de HTTP
-$id=$_GET["id"];
-include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
-$alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
-?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
-<p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
-</p>
+<div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-<p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
-<input type="submit" value="Guardar" />
+              <table>
+              <tr><td><a href="formularioalumnoinsertar.php" class = "boton">Crear Nuevo Alumno</a></td></tr>
+              <?php
+              foreach ($alumnoCollectorObj->readalumnos() as $c){
+                echo "<tr>";
+                echo "<td>".$c->getalumno_id() ."</td>";
+                echo "<td>".$c->getnombre1()."</td>";
+                echo "<td>".$c->getnombre2()."</td>";
+                echo "<td>".$c->getapellido1()."</td>";
+                echo "<td>".$c->getapellido2()."</td>";
+                echo "<td>".$c->getconvencional()."</td>";
+                echo "<td>".$c->getmovil()."</td>";
+                echo "<td>".$c->getdireccion()."</td>";
+                echo "<td>".$c->getemail()."</td>";
+                echo "<td>".$c->getestado()."</td>";
+                echo "<td><a href='formularioalumnoeditar.php?id=".$c->getalumno_id()."'>Editar</a></td>";
+                echo "<td><a href='eliminaralumno.php?id=".$c->getalumno_id()."'>Eliminar</a></td>"; 
+                echo "</tr>"; 
+              }
+              ?>
+              </table>
 
-</form>
-
+            </div>
+            
+  </div>
+</div>
 </body>
 <?php include 'footer.php'; ?>
 </html>

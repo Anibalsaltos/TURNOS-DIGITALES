@@ -40,9 +40,9 @@
                 <li class="dropdown">
                         <a href="#" id="activo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li class="le"><a id="activo" href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
                           <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
-                          <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
+                          <li class="le"><a id="activo" href="formularioañolectivo.php">Año Lectivo</a></li>
                         </ul>
                       </li>
                 <li class="cs"><a href="login.php">Cerrar Sesion</a></li>
@@ -60,45 +60,24 @@
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP
 $id=$_GET["id"];
-include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
-$alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
+include_once("añolectivoCollector.php");
+include_once("añolectivoclase.php");
+$ano_lectivoCollectorObj = new ano_lectivoCollector();
+$Objaano_lectivo = $aano_lectivoCollectorObj->showano_lectivo($id);
 ?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
+<h2>Editar asignatura</h2>
+<form action="editarañolectivo.php" method="post" >
 <p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
+Id: <input type="text" name="ano_lectivo_id" value="<?php echo $Objano_lectivo->getaano_lectivo_id(); ?>" readonly />
 </p>
 
 <p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
+Nombre: <input type="text" name="descripcion"  value="<?php echo $Objano_lectivo->getdescripcion(); ?>" autofocus required />
 </p>
 <p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
+Nombre: <input type="text" name="estado"  value="<?php echo $Objano_lectivo->getestado(); ?>" autofocus required />
 </p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
+<a href="formularioañolectivo.php">Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>

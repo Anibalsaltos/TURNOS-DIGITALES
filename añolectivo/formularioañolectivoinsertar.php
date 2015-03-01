@@ -40,9 +40,9 @@
                 <li class="dropdown">
                         <a href="#" id="activo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li class="le"><a id="activo" href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
                           <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
-                          <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
+                          <li class="le"><a id="activo" href="formularioañolectivo.php">Año Lectivo</a></li>
                         </ul>
                       </li>
                 <li class="cs"><a href="login.php">Cerrar Sesion</a></li>
@@ -57,52 +57,57 @@
   </nav>
   </header>
 
-<?php
-//obtener el valor de ID que viene del metodo GET a traves de HTTP
-$id=$_GET["id"];
-include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
-$alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
-?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
-<p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
-</p>
 
-<p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
-<input type="submit" value="Guardar" />
 
-</form>
 
+               
+<form action="insertarañolectivo.php" method="post" >
+
+   <div class="row ">
+            
+            
+        
+        <div class="row">
+            
+            <div id="contact-form" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ 
+                    <div class="form-group">
+                      <label for="descripcion" class="col-sm-3 control-label">Descripcion</label>
+                      <div class="col-sm-9">
+                          <input type="text" name = "descripcion" class="form-control" id="descripcion" placeholder=" ">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="estado" class="col-sm-3 control-label">Estado</label>
+                      <div class="col-sm-9">
+                        <input type="text" name = "estado" class="form-control" id="estado" placeholder=" ">
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-3">
+                        <button type="submit" class="btn btn-default">Guardar</button>
+                      </div>
+                      <div class="col-sm-offset-2 col-sm-3">
+                        <a href="formularioañolectivo.php" class="btn btn-default">Cancelar</a>
+                      </div>
+                      
+                    </div>
+
+              
+                  
+
+            </div> 
+     </div>
+  </div>
+</form>  
+        
+
+    
+  </div>
+
+
+  <?php include 'footer.php' ; ?>
 </body>
-<?php include 'footer.php'; ?>
 </html>

@@ -40,8 +40,8 @@
                 <li class="dropdown">
                         <a href="#" id="activo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li class="le"><a id="activo" href="formularioalumno.php">Alumno</a></li>  
-                          <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a id="activo" href="formularioasignatura.php">Asignatura</a></li>
                           <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
                         </ul>
                       </li>
@@ -60,45 +60,24 @@
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP
 $id=$_GET["id"];
-include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
-$alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
+include_once("asignaturaCollector.php");
+include_once("asignaturaclase.php");
+$asignaturaCollectorObj = new asignaturaCollector();
+$Objasignatura = $asignaturaCollectorObj->showasignatura($id);
 ?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
+<h2>Editar asignatura</h2>
+<form action="editarasignatura.php" method="post" >
 <p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
+Id: <input type="text" name="asignatura_id" value="<?php echo $Objasignatura->getasignatura_id(); ?>" readonly />
 </p>
 
 <p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
+Nombre: <input type="text" name="descripcion"  value="<?php echo $Objasignatura->getdescripcion(); ?>" autofocus required />
 </p>
 <p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
+Nombre: <input type="text" name="estado"  value="<?php echo $Objasignatura->getestado(); ?>" autofocus required />
 </p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
+<a href="formularioasignatura.php">Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>

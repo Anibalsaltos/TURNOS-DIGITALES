@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Administración - Alumno</title>
+<title>Administración - Asignatura</title>
 <?php include 'metadatos.php'; ?>
 <link href="css/ej.widgets.core.min.css" rel="stylesheet" type="text/css"/>
 <script src="js/jsrender.js" type="text/javascript"></script>
@@ -11,6 +11,7 @@
 <script src="js/ej.widget.all.min.js" type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
     <div class="container">
@@ -34,14 +35,14 @@
           </div>
           <nav id="navegacion">
           <ul class="nav navbar-nav navbar-right">
-                <li class="le" ><a href="index.php">INICIO</a></li>
+                <li class="le"><a href="index.php">INICIO</a></li>
                 <li class="le"><a  href="citas.php">CITAS</a></li>
                 <li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
                 <li class="dropdown">
                         <a href="#" id="activo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li class="le"><a id="activo" href="formularioalumno.php">Alumno</a></li>  
-                          <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a id="activo" href="formularioasignatura.php">Asignatura</a></li>
                           <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
                         </ul>
                       </li>
@@ -50,59 +51,37 @@
             <ul class="usuario">
           <li>Bienvenido</li>
       </ul>
-            
+             
           </nav>
         </div>
       </div>
   </nav>
   </header>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-<?php
-//obtener el valor de ID que viene del metodo GET a traves de HTTP
-$id=$_GET["id"];
-include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
-$alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
-?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
-<p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
-</p>
+              <table>
+              <tr><td><a href="formularioasignaturainsertar.php" class = "boton">Crear Nueva Asignatura</a></td></tr>
+              <?php
+              foreach ($alumnoCollectorObj->readasignaturas() as $c){
+                echo "<tr>";
+                echo "<td>".$c->getasignatura_id() ."</td>";
+                echo "<td>".$c->getdesrcripcion()."</td>";
+                echo "<td>".$c->getestado()."</td>";
+                echo "<td><a href='formularioalumnoeditar.php?id=".$c->getasignatura_id()."'>Editar</a></td>";
+                echo "<td><a href='eliminarasignatura.php?id=".$c->getasignatura_id()."'>Eliminar</a></td>"; 
+                echo "</tr>"; 
+              }
+              ?>
+              </table>
 
-<p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
-<input type="submit" value="Guardar" />
-
-</form>
-
-</body>
+            </div>
+            
+  </div>
+</div>
 <?php include 'footer.php'; ?>
-</html>
+</body>
+
+    
+        
+    </script>

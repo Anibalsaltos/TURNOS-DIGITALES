@@ -31,10 +31,18 @@
 	            <li class="le" ><a id="activo" href="index.php">INICIO</a></li>
 				<li class="le"><a  href="citas.php">CITAS</a></li>
 				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
+				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
+                          <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
+                        </ul>
+                      </li>
 				<li class="cs"><a href="login.php">Cerrar Sesión</a></li>
 	            </ul>
 	            <ul class="usuario">
-			    <li>Bienvenido, Joel</li>
+			    <li>Bienvenido</li>
 			</ul>
 	        </nav>
 		    </div>

@@ -29,10 +29,18 @@
 	             <li class="le" ><a href="index.php">INICIO</a></li>
 				<li class="le"><a id="activo" href="citas.php">CITAS</a></li>
 				<li class="le"><a  href="encuestas.php">ENCUESTAS</a></li>
+				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenimiento <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li class="le"><a href="formularioalumno.php">Alumno</a></li>  
+                          <li class="le"><a href="formularioasignatura.php">Asignatura</a></li>
+                          <li class="le"><a href="formularioañolectivo.php">Año Lectivo</a></li>
+                        </ul>
+                      </li>
 				<li class="cs"><a href="login.php">Cerrar Sesión</a></li>
 	            </ul>
 	            <ul class="usuario">
-			    <li>Bienvenido, Joel</li>
+			    <li>Bienvenido</li>
 			</ul>
 	        </nav>
 		    </div>
@@ -60,19 +68,19 @@
 					<td class="td">20/11/2014</td>
 					<td class="td">Lic. Anibal Saltos J.</td>
 					<td class="td">Académico - conductal</td>
-					<td class="td"><img src=""/></td>
+					<td class="td"></td>
 				</tr>
 				<tr class="tr">
 					<td class="td">15/11/2014</td>
 					<td class="td">Lic. Joel Collahuazo</td>
 					<td class="td">Conductal</td>
-					<td class="td"><img src=""/></td>
+					<td class="td"></td>
 				</tr>
 				<tr class="tr">
 					<td>15/11/2014</td>
 					<td>Lic. Kevin Santacruz</td>
 					<td>Novedades conductales</td>
-					<td><img src=""/></td>
+					<td></td>
 				</tr>
 			</table>
 		</section>

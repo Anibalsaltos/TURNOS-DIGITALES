@@ -56,53 +56,22 @@
       </div>
   </nav>
   </header>
-
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP
 $id=$_GET["id"];
+
+//incluir la libreria de DemoCollector
 include_once("alumnoCollector.php");
-include_once("alumnoclase.php");
+//creo una instancia de alumnoCollector
 $alumnoCollectorObj = new alumnoCollector();
-$Objalumno = $alumnoCollectorObj->showalumno($id);
+//Ejecuto el metodo para eliminar el objeto alumno indicando el id
+$alumnoCollectorObj->deletealumno($id);
+
+// muestro mensaje de que se ha eliminado el objeto alumno
+echo "valor id". htmlspecialchars($id) ."  ha sido eliminado correctamente.";
 ?>
-<h2>Editar alumno</h2>
-<form action="editaralumno.php" method="post" >
-<p>
-Id: <input type="text" name="alumno_id" value="<?php echo $Objalumno->getalumno_id(); ?>" readonly />
-</p>
-
-<p>
-Nombre: <input type="text" name="nombre1"  value="<?php echo $Objalumno->getnombre1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="nombre2"  value="<?php echo $Objalumno->getnombre2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido1"  value="<?php echo $Objalumno->getapellido1(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="apellido2"  value="<?php echo $Objalumno->getapellido2(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="convencional"  value="<?php echo $Objalumno->getconvencional(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="movil"  value="<?php echo $Objalumno->getmovil(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="direccion"  value="<?php echo $Objalumno->getdireccion(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="email"  value="<?php echo $Objalumno->getemail(); ?>" autofocus required />
-</p>
-<p>
-Nombre: <input type="text" name="estado"  value="<?php echo $Objalumno->getestado(); ?>" autofocus required />
-</p>
-<a href="formularioalumno.php">Cancelar</a>
-<input type="submit" value="Guardar" />
-
-</form>
-
+<div><a href="formularioalumno.php">Regresar adminitracion de alumnos</a></div>
+</div>
 </body>
 <?php include 'footer.php'; ?>
 </html>
