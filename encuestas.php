@@ -29,14 +29,12 @@ session_start();
 		      	<h1 class="titulo"><img id="logo" src="img/logo.png" alt="CITE-MATICO"/> CITE-MATICO</h1>
 		      </div>
 		      <nav id="navegacion">
-		      <ul class="nav navbar-nav navbar-right">
-	              <li class="le" ><a href="login.php">INICIO</a></li>
+		    <ul class="nav navbar-nav navbar-right">
+	            <li class="le" ><a href="login.php">INICIO</a></li>
 				<li class="le"><a  href="citas.php">CITAS</a></li>
 				<li class="le"><a id="activo" href="#">ENCUESTAS</a></li>
 				<li class="cs"><a href="logout.php">Cerrar Sesión</a></li>
-	            </ul>
-
-	        
+	        </ul>
 	        <ul class="usuario">
 			    <?php
         		// $_SESSION["usuario"]= $_POST['usuario'];
