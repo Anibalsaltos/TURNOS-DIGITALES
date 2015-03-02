@@ -17,13 +17,13 @@ class docenteCollector extends Collector
 {
   
   function showdocente($id) {
-    $row = self::$db->getRows("SELECT * FROM claseDB.docente where iddocente= ? ", array("{$id}"));
+    $row = self::$db->getRows("SELECT * FROM citas.docente where iddocente= ? ", array("{$id}"));
     $Objdocente = new Docente($row[0]{'iddocente'},$row[0]{'nombre'},$row[0]{'estado'});
     return $Objdocente;
   }
 
   function createdocente($nombre, $estado) {    
-    $insertrow = self::$db->insertRow("INSERT INTO claseDB.docente (iddocente,nombre, estado) VALUES (?, ?, ?)", array(null, "{$nombre}", "{$estado}"));
+    $insertrow = self::$db->insertRow("INSERT INTO citas.docente (iddocente,nombre, estado) VALUES (?, ?, ?)", array(null, "{$nombre}", "{$estado}"));
   }  
 
   function readdocentes() {
@@ -37,11 +37,11 @@ class docenteCollector extends Collector
   }
   
   function updatedocente($iddocente,$nombre, $estado) {    
-    $insertrow = self::$db->updateRow("UPDATE claseDB.docente SET docente.nombre = ? , docente.estado= ? WHERE docente.iddocente = ? ", array( "{$nombre}","{$estado}",$iddocente));
+    $insertrow = self::$db->updateRow("UPDATE citas.docente SET docente.nombre = ? , docente.estado= ? WHERE docente.iddocente = ? ", array( "{$nombre}","{$estado}",$iddocente));
   }  
 
   function deletedocente($iddocente) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM claseDB.docente WHERE iddocente= ?", array("{$iddocente}"));
+    $deleterow = self::$db->deleteRow("DELETE FROM citas.docente WHERE iddocente= ?", array("{$iddocente}"));
   }  
 
 

@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 include_once('Encuesta.php');
 
@@ -43,9 +43,6 @@ class EncuestaCollector extends Collector
   function deleteEncuesta($id) {    
     $deleterow = self::$db->deleteRow("DELETE FROM citas.encuesta WHERE idencuesta= ?", array("{$id}"));
   }  
-
-
-
 }
 ?>
 
