@@ -7,10 +7,13 @@ $DemoCollectorObj = new alumnoCollector();
 <?php
 foreach ($DemoCollectorObj->readAlumnos() as $c){
   echo "<tr>";
-  echo "<td>".$c->getIdDemo() ."</td>";
-  echo "<td>".$c->getNombre()."</td>";
-  echo "<td><a href='alumno/formularioalumnoEditar.php?id=".$c->getIdDemo()."'>editar</a></td>";
-  echo "<td><a href='alumno/eliminar.php?id=".$c->getIdDemo()."'>eliminar</a></td>"; 
+  echo "<td>".$c->getIdalumno() ."</td>";
+  echo "<td>".$c->getNombre1()."</td>";
+  echo "<td>".$c->getNombre2()."</td>";
+  echo "<td>".$c->getApellido1()."</td>";
+  echo "<td>".$c->getApellido2()."</td>";
+  echo "<td><a href='alumno/formularioalumnoEditar.php?id=".$c->getIdalumno()."'>editar</a></td>";
+  echo "<td><a href='alumno/eliminar.php?id=".$c->getIdalumno()."'>eliminar</a></td>"; 
   echo "</tr>"; 
 }
 ?>

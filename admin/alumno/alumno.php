@@ -9,8 +9,11 @@ class alumno
     private $apellido2;
     
      function __construct($idalumno, $nombre1, $nombre2, $apellido1, $apellido2) {
-       $this->idDemo = $idDemo;
-       $this->nombre = $nombre;
+       $this->idalumno = $idalumno;
+       $this->nombre1 = $nombre1;
+       $this->nombre2 = $nombre2;
+       $this->apellido1 = $apellido1;
+       $this->apellido2 = $apellido2;
      }
     
      function setIdalumno($idalumno){
@@ -39,6 +42,9 @@ class alumno
      } 
      function setApellido2($apellido2){
        $this->apellido2 = $apellido2;
+     } 
+     function getApellido2(){
+       return $this->apellido2;
      } 
 }
 

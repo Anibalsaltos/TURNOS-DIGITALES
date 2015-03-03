@@ -8,13 +8,13 @@
 <form action="insert.php" method="post" >
 <p>
 
-Primer Nombre: <input type="text" name="Primer Nombre" autofocus required />
+Primer Nombre: <input type="text" name="nombre1" autofocus required />
 
-Segundo Nombre: <input type="text" name="Segundo Nombre" />	
+Segundo Nombre: <input type="text" name="nombre2"/>	
 
-Primer Apellido: <input type="text" name="Primer Apellido"  />
+Primer Apellido: <input type="text" name="apellido1"/>
 
-Segundo Apellido: <input type="text" name="Segundo Apellido"  />
+Segundo Apellido: <input type="text" name="apellido2"/>
 
 </p>
 <input type="submit" value="Submit!" />

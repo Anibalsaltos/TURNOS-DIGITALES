@@ -1,35 +1,35 @@
 <?php
 
-class ano_lectivo
+class anio_lectivo
 {
-    private $ano_lectivo_id;
-    private $descripcion;
+    private $idanio;
+    private $anio;
     private $estado;
     
      
-    function __construct($ano_lectivo_id, $descripcion, $estado) {   
-      $this->ano_lectivo_id = $ano_lectivo_id;
-      $this->nombre1 = $descripcion;
-      $this->apellido1 = $estado;
+    function __construct($idanio, $anio, $estado) {   
+      $this->idanio = $idanio;
+      $this->anio = $anio;
+      $this->estado = $estado;
 
      }
     
-     function setano_lectivo_id($ano_lectivo_id){
-       $this->ano_lectivo_id = $ano_lectivo_id;
+     function setAnioLectivo($idanio){
+       $this->idanio = $idanio;
      } 
-     function getano_lectivo_id(){
-       return $this->ano_lectivo_id;
+     function getAnioLectivo(){
+       return $this->idanio;
      } 
-     function setdescripcion($descripcion){
-       $this->descripcion = $descripcion;
+     function setAnio($anio){
+       $this->anio = $anio;
      } 
-     function getdescricion(){
-       return $this->descripcion;
+     function getAnio(){
+       return $this->anio;
      } 
-     function setestado($estado){
+     function setEstado($estado){
        $this->estado = $estado;
      } 
-     function getestado(){
+     function getEstado(){
        return $this->estado;
      }      
 }
