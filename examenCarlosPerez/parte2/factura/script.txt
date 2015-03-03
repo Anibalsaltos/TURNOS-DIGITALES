@@ -1,0 +1,5 @@
+CREATE TABLE `clasedb`.`factura` (
+  `idfactura` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(45) NULL,
+  `total` INT NULL,
+  PRIMARY KEY (`idfactura`));

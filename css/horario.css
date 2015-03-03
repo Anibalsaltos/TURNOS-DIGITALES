@@ -1,0 +1,26 @@
+/*Css para el horario*/
+table{
+   width:100%;
+   margin-top: 2em;
+   border-spacing: 15px 5px;
+   border-collapse: separate;
+}
+tr{
+   background-color: #EEFFFF;
+   color:#0067B8;
+   font-weight: bold;
+}
+tr:first-child{
+   background-color: #E1FAF6;
+}
+td:first-child{
+   width:15%;
+   
+}
+td{
+   border-radius: 0.3em;
+   padding:0.5em;
+}
+.disponible{
+   background-color: #FFEE00;
+}
