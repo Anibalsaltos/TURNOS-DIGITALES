@@ -17,7 +17,7 @@ $EncuestaCollectorObj->updateEncuesta($idencuesta,$descripcion, $estado);
 
 echo "id :".$idencuesta." actualizado a:".$descripcion." con estado:".$estado." </br>";
 ?>
-<div><a href="index.php">Volver al Inicio</a></div>
+<div><a href="../index.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

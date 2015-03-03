@@ -2,6 +2,28 @@
 
 include_once('Usuario.php');
 
+// if(@file_exists('./Collector') ) {
+//     include_once("./Collector.php");
+// }else if(@file_exists('../Collector')){
+//    include_once("../Collector.php");
+// }else if(@file_exists('Collector.php')){
+//   include_once("Collector.php");
+// }
+// else if(@file_exists('./../Collector.php')){
+//   include_once("./../Collector.php");
+// }
+// else if(@file_exists('Collector.php')){
+//   include_once("Collector.php");
+// }
+
+
+// directorio actual
+//echo getcwd() . "\n";
+ 
+ 
+// directorio actual 
+//echo getcwd() . "\n";
+
 if(@file_exists('./Collector') ) {
     include_once("./Collector.php");
 }else if(@file_exists('../Collector')){
@@ -12,7 +34,10 @@ if(@file_exists('./Collector') ) {
 else if(@file_exists('./../Collector.php')){
   include_once("./../Collector.php");
 }
-
+else if(@file_exists('Collector.php')){
+  include_once("Collector.php");
+}
+ 
 class UsuarioCollector extends Collector
 {
   

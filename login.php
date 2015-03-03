@@ -41,11 +41,11 @@ session_start();
 	              <li class="cs"><a href="logout.php">Cerrar Sesión</a></li>
 	          </ul>
 	          <ul class="usuario">
-	          	<?php
-	          	if(!isset($_SESSION)){
-        		$_SESSION["usuario"]= $_POST["usuario"];}
-        		// echo "<a href='boostrap.php'> Volver </a>"; 
-        		?>
+	          	 <!-- php -->
+	          	<!-- //if(!isset($_SESSION)){ -->
+        		<!-- //$_SESSION["usuario"]= $_POST["usuario"];} -->
+        		<!-- /// echo "<a href='boostrap.php'> Volver </a>";  -->
+        		<!-- // ?> -->
 				<?php echo "<li>Bienvenido, ".$_SESSION["usuario"]."</li>"?>
 			</ul>
 	           
@@ -86,11 +86,20 @@ session_start();
 	<?php include 'info.php' ?>
 	<!--Formulario Usuario-->
 	<section class="datos-user">
-		<h2>Información General</h2>
-		<div>Nombre : Kevin Correa</div>
-		<div>Cédula : 112312312332</div>
-		<div>Dirección : Francisco Jacome</div>
-		<div>Teléfono : 666</div>
+
+		<?php 
+			chdir('admin/representante');
+
+			include_once("RepresentanteCollector.php");
+			$RepresentanteCollector = new RepresentanteCollector();
+			$representante = $RepresentanteCollector->showRepresentante($_SESSION['idRepresentante']);
+
+			echo "<div>Nombre : ".$representante->getNombre1()." ".$representante->getApellido1()."</div>";
+			echo "<div>Email : ".$representante->getEmail()."</div>";
+			echo "<div>Movil : ".$representante->getMovil()."</div>";
+			echo "<div>Dirección : ".$representante->getDireccion()."</div>";
+
+		 ?>
 	</section>
 
 	<!-- <div id="contact-form" class="row">
@@ -118,10 +127,18 @@ session_start();
 	<section class="botones">
 		<div class="row">
 			<div class="col-xs-6">
-				<a href="solicitud.php" class="boton">Solicitar cita</a>
+
+				<form action="solicitud.php" method="POST">
+					
+					<input type="submit" class="boton" value="Solicitar Cita" name="<?php echo $representante->getIdRepresentante(); ?>">
+				</form>
+				
 			</div>
 			<div class="col-xs-6">
-				<a href="actualizar.php" class="boton">Actualizar datos</a>
+				<form action="actualizar.php" method="POST">
+					
+					<input type="submit" class="boton" value="Actualizar datos" name="<?php echo $representante->getIdRepresentante(); ?>">
+				</form>
 			</div>
 		</div>
 	</section>

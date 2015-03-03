@@ -17,7 +17,7 @@ $preguntaCollectorObj->updatePregunta($idpregunta,$descripcion,$estado);
 
 echo "id :".$idpregunta." actualizado a:".$descripcion." estado :".$estado."</br>";
 ?>
-<div><a href="index.php">Volver al Inicio</a></div>
+<div><a href="../index.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

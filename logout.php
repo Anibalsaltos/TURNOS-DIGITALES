@@ -19,15 +19,12 @@ session_start();
     </header>
 
  <?php
-        if (isset($_SESSION['nombre'])){
-          session_destroy();
-        echo "<b><center>Se ha desconectado la sesión exitosamente </b><br/>" ;
-        echo "<a href='index.php' class='boton'>Ir al login</a></center>";
-      }else{
-        echo "<b><center>Problema al cerrar la sesion.....</b><br/>" ;
-        echo "<a href= 'index.php' class='boton'>Ir al login</a></center><br/><br/><br/>";
+
       
-    }?>
+        session_destroy();
+         header('Location: index.php');
+
+      ?>
     <?php include 'footer.php'; ?>
   </div>
 

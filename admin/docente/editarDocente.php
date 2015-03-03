@@ -17,7 +17,7 @@ $DocenteCollectorObj->updatedocente($id,$nombre,$estado);
 
 echo "id:".$id." actualizado a:".$nombre." </br>";
 ?>
-<div><a href="index.php">Volver al Inicio</a></div>
+<div><a href="../index.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

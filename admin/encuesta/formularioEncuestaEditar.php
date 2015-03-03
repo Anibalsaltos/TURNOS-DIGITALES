@@ -48,7 +48,7 @@ Estado:
 
 
 
-<a href="index.php">Cancelar</a>
+<a href="../index.php">Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>

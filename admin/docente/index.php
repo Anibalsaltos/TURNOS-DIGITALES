@@ -11,7 +11,7 @@ foreach ($DocenteCollectorObj->readdocentes() as $c){
   echo "<td>".$c->getNombre()."</td>";
   //echo "<td>".$c->getEstado()."</td>";
   echo "<td><a href='docente/formularioDocenteEditar.php?id=".$c->getIdDocente()."'>editar</a></td>";
-  echo "<td><a href='docente/eliminar.php?id=".$c->getIdDocente()."'>eliminar</a></td>"; 
+  echo "<td><a href='docente/eliminarDocente.php?id=".$c->getIdDocente()."'>eliminar</a></td>"; 
   echo "</tr>"; 
 }
 ?>

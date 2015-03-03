@@ -7,7 +7,7 @@
 <body>
 <form action="insert.php" method="post" >
 
-<p>Descripción: <input type="text" name="descripcion" autofocus required /></p>
+<p>Pregunta: <input type="text" name="descripcion" autofocus required /></p>
 
 <p>Estado :
 <select name="estado">

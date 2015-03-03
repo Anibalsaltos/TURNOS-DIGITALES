@@ -58,22 +58,25 @@ session_start();
 	<!--Formulario Usuario-->
 	<div id="contact-form" class="row">
 		<div class="col-lg-12">
-		   <form method="get" action="emailForm.php">  	         
+		   <form method="get">  	    
+		   <?php 
+
+		   chdir('admin/representante');
+		   include_once("RepresentanteCollector.php");
+			$RepresentanteCollector = new RepresentanteCollector();
+			$representante = $RepresentanteCollector->showRepresentante($_SESSION['idRepresentante']);
+		    ?>     
 		    <label for="nombre">Nombres: <span class="required">*</span></label>  
-		    <input type="text" id="nombre" name="nombre" required="required" value="KRSB"/>  
+		    <input type="text" id="nombre" name="nombre" required="required" value="<?php echo $representante->getNombre1(); ?>"/>  
 
 			<label for="apellido">Apellidos: <span class="required">*</span></label>  
-		    <input type="text" id="apellido" name="apellido" required="required" value="Santacruz Burgos"/>  
+		    <input type="text" id="apellido" name="apellido" required="required" value="<?php echo $representante->getApellido1(); ?>"/>  
 
 		    <label for="direccion">Dirección: <span class="required">*</span></label>  
-		    <input type="text" id="direccion" name="direccion" required="required" value="Francisco Jacome Mz 294 Solar 5" />  
-
-		         
-		    <label for="fechaNacimiento">Fecha Nacimiento: <span class="required">*</span></label>  
-		    <input type="date" value="1994-02-18" id="nacimiento" name="nacimiento" required="required" />
+		    <input type="text" id="direccion" name="direccion" required="required" value="<?php echo $representante->getDireccion(); ?>" />  
 
 		    <label for="celular">Celular: <span class="required">*</span></label>  
-		    <input type="tel"  pattern="[0-9]{10}" id="celular" name="celular" required="required" value="0981893287"/>
+		    <input type="tel"  pattern="[0-9]{10}" id="celular" name="celular" required="required" value="<?php echo $representante->getMovil(); ?>"/>
 		    <p id="tip"><span class="required">*</span> Datos obligatorios</p>     
 	   		</form>
 	   	</div>

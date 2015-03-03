@@ -21,7 +21,7 @@ Id: <input type="text" name="idpregunta" value="<?php echo $ObjPregunta->getIdPr
 </p>
 
 <p>
-Descripcion: <input type="text" name="descripcion"  value="<?php echo $ObjPregunta->getDescripcion(); ?>" autofocus required />
+Pregunta: <input type="text" name="descripcion"  value="<?php echo $ObjPregunta->getDescripcion(); ?>" autofocus required />
 </p>
 
 <p>

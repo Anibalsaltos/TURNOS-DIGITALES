@@ -52,8 +52,9 @@ session_start();
 	<!--Solicitud Cita-->
 	<section>
 	<div id="contact-form"> 
-	   <form method="post" action="emailForm.php">  
+	   <form>  
 	      <label for="name">Seleccione el docente: <span class="required">*</span></label>
+
 	      <select name="docente" id="subject">
 	      	<option value="Kevin">Kevin Santacruz</option>
 	      	<option value="Joel">Joel Collahuazo</option>
