@@ -61,39 +61,28 @@ session_start();
 	<section class="encuestas">
 	<div class="row">
 		<div class="col-xs-12">
-		<section class="encuesta">
-			<span class="fecha">20-01-2015</span>
-			<span class="nombre">Encuesta 2015</span>
-			<span ><a href="#" class="enlace">www.encuesta.com</a></span>
-			<span class="estado">CADUCADO</span>
-		</section>
-		</div>
 
-		<div class="col-xs-12">
-		<section class="encuesta">
-			<span class="fecha">20-03-2015</span>
-			<span class="nombre">Encuesta 2015</span>
-			<span ><a href="#" class="enlace">www.encuesta.com</a></span>
-			<span class="estado">DISPONIBLE</span>
-		</section>
-		</div>
+	<?php 
 
-		<div class="col-xs-12">
-		<section class="encuesta">
-			<span class="fecha">20-04-2015</span>
-			<span class="nombre">Encuesta 2015</span>
-			<span class="enlace"><a href="#" class="enlace">www.encuesta.com</a></span>
-			<span class="estado">DISPONIBLE</span>
-		</section>
-		</div>
+		   chdir('admin/encuesta');
+		   include_once("EncuestaCollector.php");
+			$EncuestaCollector = new EncuestaCollector();
+			
 
-		<div class="col-xs-12">
-		<section class="encuesta">
-			<span class="fecha">20-05-2015</span>
-			<span class="nombre">Encuesta 2015</span>
-			<span class="enlace"><a href="#" class="enlace">www.encuesta.com</a></span>
-			<span class="estado">DISPONIBLE</span>
-		</section>
+			foreach ($EncuestaCollector->readEncuestas() as $c) {
+				
+				echo "<section class='encuesta'>";
+				echo "<span class='fecha'>03-02-2015</span>";
+				echo "<span class='nombre'>".$c->getDescripcion()."</span>";
+				echo "<span ><a href='#'' class='enlace'>encuesta</a></span>";
+				if($c->getEstado()==0){
+					echo "<span class='estado'>CADUCADO</span>";
+				}else{
+					echo "<span class='estado'>DISPONIBLE</span>";
+				}echo "</section>";
+			}
+
+		    ?>   
 		</div>
 	</div>
 	</section>

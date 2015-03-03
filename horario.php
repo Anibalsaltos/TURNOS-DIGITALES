@@ -10,6 +10,16 @@ session_start();
 	</head>
 <body>
 	<div class="container">
+		<?php 
+
+		if(isset($_POST["idDocente"])){
+			$id = $_POST["idDocente"];
+			$_SESSION['idDocente'] = $id;
+		}
+		if(isset($_SESSION['idDocente'])){
+			$id = $_SESSION['idDocente'];
+		}
+ ?>
 		<!--Menu de navegacion-->
 		<header>
 		<nav class="navbar navbar-default" role="navigation">
@@ -48,78 +58,60 @@ session_start();
 	    </div>
 	</nav>
 	<!--Info adicional-->
+	<?php 
+
+	// $_SESSION['idRepresentante'] = $c->getIdRepresentante();
+	 ?>
 	<?php include 'info.php' ?>
 
+	<?php
+
+
+		if(isset($_POST['dia']) && (isset($_POST['hora']) && (isset($id)))){
+
+			chdir('admin/citas');
+			include_once("CitaCollector.php");
+
+			$CitaCollector = new CitaCollector();
+			$CitaCollector->createcita($id,$_SESSION['idRepresentante'],$_POST['hora'],$_POST['dia']);
+	?>
+	
 	<section id="horario">
-		<div class="table-responsive">
-			<table>
-				<tr>
-					<td>Hora</td>
-					<td>Lunes</td>
-					<td>Martes</td>
-					<td>Miércoles</td>
-					<td>Jueves</td>
-					<td>Viernes</td>
-				</tr>
-				<tr>
-					<td>08:15 - 09:15</td>
-					<td></td>
-					<td class="disponible"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>09:15 - 10:15</td>
-					<td></td>
-					<td class="disponible"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>10:15 - 11:15</td>
-					<td></td>
-					<td></td>
-					<td class="disponible"></td>
-					<td></td>
-					<td class="disponible"></td>
-				</tr>
-				<tr>
-					<td>11:15 - 12:15</td>
-					<td></td>
-					<td></td>
-					<td class="disponible"></td>
-					<td></td>
-					<td class="disponible"></td>
-				</tr>
-				<tr>
-					<td>13:15 - 14:15</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>14:15 - 15:15</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>15:15 - 16:15</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
+		
+		<p class="exito">Cita creada con éxito.</p>
+
 	</section>
+
+	<?php
+		}else{
+	?> 
+
+	<section class="hora">
+		<form action="horario.php" method="post">
+			
+		
+		<p>Seleccione el día:
+			<select name="dia">
+				<option value="Lunes">Lunes</option>
+				<option value="Martes">Martes</option>
+				<option value="Miércoles">Miércoles</option>
+				<option value="Jueves">Jueves</option>
+				<option value="Viernes">Viernes</option>
+			</select>
+		</p>
+		<p>Seleccione la hora:
+<select name="hora" id="">
+	
+			<option name="08:00">8 AM</option>
+			<option name="09:00">9 AM</option>
+			<option name="10:00">10 AM</option>
+</select>
+		</p>
+		<input type="submit" value="Guardar Cita"/>
+		</div>
+		</form>
+	</section>
+	<?php } ?>
 	<?php include 'footer.php'; ?>
 </div>
 </body>

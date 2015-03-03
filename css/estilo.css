@@ -12,6 +12,15 @@ body {
 .cntr{
 	width:100%;
 }
+.exito,.hora{
+   width: 70%;
+   text-align: center;
+   background-color: white;
+   margin-top: 3em;
+   padding: 1em 0;
+   margin-left: 8em;
+}
+
 .boton{
 background-color: #FFC900;
 background-image: -webkit-linear-gradient(rgba(41, 150, 47, .8), rgba(45, 194, 52, .2));

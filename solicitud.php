@@ -6,7 +6,7 @@ session_start();
 <head>
 	<?php include 'metadatos.php'; ?>
 	<title>Solicitud de Cita</title>
-</head>
+	</head>
 <body>
 	<div class="container">
 		<!--Menu de navegacion-->
@@ -52,39 +52,64 @@ session_start();
 	<!--Solicitud Cita-->
 	<section>
 	<div id="contact-form"> 
-	   <form>  
-	      <label for="name">Seleccione el docente: <span class="required">*</span></label>
+	<section class="botones">
 
-	      <select name="docente" id="subject">
-	      	<option value="Kevin">Kevin Santacruz</option>
+	   <form method="post" action="horario.php">  
+	      <label for="name">Seleccione el docente: <span class="required">*</span></label>
+	<?php 
+
+	      chdir('admin');
+	include_once("docente/docente.php");
+	include_once("docente/docenteCollector.php");
+	$objDocenteCollector = new docenteCollector();
+	
+	 ?>
+	<select name="idDocente">
+		<?php 
+			foreach ($objDocenteCollector->readDocentes() as $c) {
+				
+				// echo "<option value='".$c->getIdRepresentante()."'>".$c->getNombre1." ".$c->getApellido1."</option>";
+				//echo "Id Representate: ".$c->getIdRepresentante();
+				//value="<?php echo $ObjUsuario->getPassword();
+				echo "<option value='".$c->getIdDocente()."'>".$c->getNombre()."</option>";
+
+			}
+		 ?>
+	</select>
+
+
+	      <!-- <select name="docente" id="subject">
+	      	<option value="Kevin"><?php  ?></option>
 	      	<option value="Joel">Joel Collahuazo</option>
 	      	<option value="Carlos">Carlos Julio Pérez</option>
 	      	<option value="Cristian">Cristian Brunis</option>
 	      	<option value="Anibal">Anibal Saltos</option>
-	      </select>
+	      </select> -->
 	         
-	      <label for="name">Nombres: <span class="required">*</span></label>  
-	      <input type="text" id="nombre" name="nombre" value="" required="required" />  
-
-		<label for="name">Apellidos: <span class="required">*</span></label>  
-	      <input type="text" id="apellido" name="apellido" value="" required="required" />  
 
 	      <label for="name">Cursos: <span class="required">*</span></label>  
-	      <input type="text" id="curso" name="curso" value="" required="required" />  
+	      <?php 
+	include_once("salon/Salon.php");
+	include_once("salon/SalonCollector.php");
+	$objSalonCollector = new SalonCollector();
+	
+	 ?>
+	<select name="idSalon">
+		<?php 
+			foreach ($objSalonCollector->leerSalones() as $c) {
+				
+				// echo "<option value='".$c->getIdRepresentante()."'>".$c->getNombre1." ".$c->getApellido1."</option>";
+				//echo "Id Representate: ".$c->getIdRepresentante();
+				//value="<?php echo $ObjUsuario->getPassword();
+				echo "<option value='".$c->getId()."'>".$c->getDescripcion()."</option>";
 
-	         
-	       <label for="name">Asignaturas: <span class="required">*</span></label>  
-	      <input type="text" id="asignatura" name="asignatura" value="" required="required" /> 
-
-	      <label for="name">Celular: <span class="required">*</span></label>  
-	      <input type="text" id="celular" name="celular" value="" required="required" />
-	      <p id="tip"><span class="required">*</span> Datos obligatorios</p>
-	         
+			}
+		 ?>
+	</select> 	         
+		<input type="submit" value="Ver Horario"/>
+	</section>
    		</form>  
 	</div>
-	<section class="botones">
-		<a href="horario.php" class="boton">Ver horario</a>
-	</section>
 	</section>
 	<?php include 'footer.php'; ?>
 </div>

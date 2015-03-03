@@ -34,5 +34,8 @@
 		<h2>Año Lectivo</h2>
 		<?php include 'aniolectivo/index.php'; ?>
 
+		<h2>Citas</h2>
+		<?php include 'citas/index.php'; ?>
+
 	</body>
 </html>
